@@ -7,3 +7,60 @@
 html {
   font-family: sans-serif;
 }
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: rgb(205, 205, 205);
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.character__container {
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  gap: 1rem;
+  min-width: 220px;
+  max-width: 220px;
+  height: 450px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  text-align: center;
+}
+
+.character__image {
+  max-width: 10rem;
+  border-radius: 10px;
+}
