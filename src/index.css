@@ -4,8 +4,50 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: sans-serif;
+body {
+  margin: 0;
+  color: #000046;
+  font-family: "Open Sans", sans-serif;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2e2e2e;
+  padding: 12px;
+}
+
+.main-logo {
+  width: 111px;
+  height: 57px;
+}
+
+.main-title {
+  color: #dcbc65;
+  padding-top: 20px;
+  text-shadow: -3px 3px 1px #000;
+}
+
+.main-title {
+  color: #dcbc65;
+  font-size: 25px;
 }
 
 body,
