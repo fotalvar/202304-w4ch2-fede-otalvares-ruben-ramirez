@@ -5,7 +5,7 @@ interface CharacterProps {
 }
 
 const Character = ({
-  character: { id, name, heigth, mass, created },
+  character: { id, name, height, mass, created },
 }: CharacterProps): JSX.Element => {
   return (
     <li className="character">
@@ -16,7 +16,7 @@ const Character = ({
           src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
           alt={name}
         />
-        <span className="character__details">Heigth: {heigth}</span>
+        <span className="character__details">Height: {height}</span>
         <span className="character__details">Mass: {mass}</span>
         <span className="character__details">Creation date: {created}</span>
       </div>
