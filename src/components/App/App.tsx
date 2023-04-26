@@ -21,7 +21,7 @@ const App = (): JSX.Element => {
           width="200"
           height="96"
         />
-        <h1 className="main-title">Characters Stars Words</h1>
+        <h1 className="main-title">Characters of StarWars</h1>
       </header>
       <section className="main">
         <ul className="characters">
