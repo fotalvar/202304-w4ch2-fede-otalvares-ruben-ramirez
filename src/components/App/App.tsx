@@ -1,4 +1,16 @@
+import { CharacterStructure } from "../../types";
+import Character from "../Character/Character";
+
 const App = (): JSX.Element => {
+  const character: CharacterStructure = {
+    id: 4,
+    name: "Darth Vader",
+    picture: "https://starwars-visualguide.com/assets/img/characters/4.jpg",
+    heigth: 202,
+    mass: 136,
+    created: "2014-12-09T13:50:51.644000Z",
+  };
+
   return (
     <div className="container">
       <header className="main-header">
@@ -12,7 +24,9 @@ const App = (): JSX.Element => {
         <h1 className="main-title">Characters Stars Words</h1>
       </header>
       <section className="main">
-        <ul className="characters"></ul>
+        <ul className="characters">
+          <Character character={character} />
+        </ul>
       </section>
     </div>
   );
