@@ -10,7 +10,7 @@ describe("Given a Character component", () => {
       const character: CharacterStructure = {
         id: 4,
         name: "Darth Vader",
-        heigth: 202,
+        height: 202,
         mass: 136,
         created: "2014-12-09T13:50:51.644000Z",
       };
