@@ -11,7 +11,7 @@ const Character = ({
     <li className="character">
       <div className="character__container">
         <h2 className="character__name">{name}</h2>
-        <img className="character__image" src={picture} alt={name} />
+        <img className="character__image" src={`img/${picture}`} alt={name} />
         <span className="character__details">Heigth: {heigth}</span>
         <span className="character__details">Mass: {mass}</span>
         <span className="character__details">Creation date: {created}</span>
