@@ -1,14 +1,22 @@
+import { useEffect, useState } from "react";
 import { CharacterStructure } from "../../types";
 import Character from "../Character/Character";
 
 const App = (): JSX.Element => {
-  const character: CharacterStructure = {
-    id: 4,
-    name: "Darth Vader",
-    picture: "https://starwars-visualguide.com/assets/img/characters/4.jpg",
-    heigth: 202,
-    mass: 136,
-    created: "2014-12-09T13:50:51.644000Z",
+  const apiUrl = import.meta.env.VITE_API_URL;
+
+  const [character, setCharacter] = useState<CharacterStructure[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      const response = await fetch(`${apiUrl}characters`);
+      const characterApi = (await response.json()) as CharacterStructure[];
+      loadCharacter(characterApi);
+    })();
+  }, [apiUrl]);
+
+  const loadCharacter = (character: CharacterStructure[]): void => {
+    setCharacter(character);
   };
 
   return (
@@ -25,7 +33,9 @@ const App = (): JSX.Element => {
       </header>
       <section className="main">
         <ul className="characters">
-          <Character character={character} />
+          {character.map((character) => (
+            <Character character={character} key={character.id} />
+          ))}
         </ul>
       </section>
     </div>
